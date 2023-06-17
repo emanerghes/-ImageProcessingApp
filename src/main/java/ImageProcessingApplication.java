@@ -10,6 +10,7 @@ class ImageProcessingApplication {
     private BufferedImage processedImage;
     private JFrame frame;
     private JLabel imageLabel;
+    ProxyImageFilter filter = new ProxyImageFilter();
 
     public synchronized void loadImage(String filePath) {
         try {
@@ -22,8 +23,8 @@ class ImageProcessingApplication {
     }
 
     public synchronized void applyFilter(String filterType) {
-        ImageFilter filter = ChooseFilterFactory.createFilter(filterType);
-        processedImage = filter.applyFilter(originalImage);
+
+        processedImage = filter.createFilter(processedImage, filterType);
         displayImage(processedImage);
     }
 
@@ -91,7 +92,11 @@ class ImageProcessingApplication {
         frame.repaint();
     }
 
-    public BufferedImage getOriginalImage() {return originalImage;}
+    public BufferedImage getOriginalImage() {
+        return originalImage;
+    }
 
-    public BufferedImage getProcessedImage() {return processedImage;}
+    public BufferedImage getProcessedImage() {
+        return processedImage;
+    }
 }
