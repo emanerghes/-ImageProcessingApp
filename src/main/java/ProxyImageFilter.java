@@ -10,7 +10,8 @@ class ProxyImageFilter extends ImageFilter {
 
     public ProxyImageFilter() {
         this.cache = new HashMap<>();
-        ChooseFilterFactory chooseFilterFactory = new ChooseFilterFactory();
+        chooseFilterFactory = new ChooseFilterFactory();
+
     }
 
     public BufferedImage createFilter(BufferedImage image, String filterType) {

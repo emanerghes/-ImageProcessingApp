@@ -19,6 +19,12 @@ public class FileSelectionPanel {
         openFileButton = new JButton("Open");
         saveButton = new JButton("Save");
 
+        JFrame frame = new JFrame("Choose File Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(this.getPanel());
+        frame.pack();
+        frame.setVisible(true);
+
         // Action  for "Choose File" button
         chooseFileButton.addActionListener(new ActionListener() {
             @Override
@@ -77,6 +83,10 @@ public class FileSelectionPanel {
         panel.add(chooseFileButton);
         panel.add(openFileButton);
         panel.add(saveButton);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(this.getPanel());
+        frame.pack();
+        frame.setVisible(true);
     }
 
     public JPanel getPanel() {
