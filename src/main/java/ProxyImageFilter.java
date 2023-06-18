@@ -5,19 +5,19 @@ import java.util.Map;
 class ProxyImageFilter extends ImageFilter {
     private ImageFilter realImageFilter;
     private String filterType;
+    ChooseFilterFactory chooseFilterFactory;
     private Map<String, BufferedImage> cache;
 
     public ProxyImageFilter() {
         this.cache = new HashMap<>();
+        ChooseFilterFactory chooseFilterFactory = new ChooseFilterFactory();
     }
 
     public BufferedImage createFilter(BufferedImage image, String filterType) {
 
         this.filterType = filterType;
-        ChooseFilterFactory chooseFilterFactory = new ChooseFilterFactory();
         realImageFilter = chooseFilterFactory.createFilter(filterType);
         BufferedImage returnImage = applyFilter(image);
-
         return returnImage;
     }
 

@@ -1,10 +1,15 @@
-
+import javax.swing.*;
 
 class Main {
 
     // Example usage
     public static void main(String[] args) {
-        ImageProcessingApplication app = new ImageProcessingApplication();
-        app.loadImage("C:\\Users\\a\\Pictures\\image1.png");
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                FileSelectionPanel fileSelectionPanel = new FileSelectionPanel();
+
+            }
+        });
     }
 }
