@@ -14,7 +14,6 @@ fi
 # Navigate to the source directory
 cd main
 
-# Build or prepare your project (if needed)
 
 # Commit and push changes to the destination branch
 git add .
