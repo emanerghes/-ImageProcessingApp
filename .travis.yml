@@ -1,6 +1,13 @@
+
 language: java
 jdk:
   - openjdk15
 
 script:
   - mvn clean install
+
+    deploy:
+      provider: script
+      script: bash deploy.sh
+      on:
+        branch: master
