@@ -11,7 +11,7 @@ class GrayscaleFilterTest {
     @Test
     void testGrayscaleFilter() throws IOException {
         // Create a test image
-        BufferedImage testImage =ImageIO.read(new File("C:\\Users\\a\\Pictures\\image2.png"));
+        BufferedImage testImage =ImageIO.read(new File("C:\\Users\\a\\Pictures\\image3.png"));
 
         // Apply the grayscale filter
         GrayscaleFilter grayscaleFilter = new GrayscaleFilter();
