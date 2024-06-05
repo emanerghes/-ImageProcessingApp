@@ -10,7 +10,7 @@ class ApplyFilterTest {
     void testApplyFilter() {
 
         app = new ImageProcessingApplication();
-        app.loadImage("C:\\Users\\a\\Pictures\\image3.png");
+        app.loadImage("image3.png");
         BufferedImage originalImage = app.getOriginalImage();
 
         // Apply the grayscale filter
