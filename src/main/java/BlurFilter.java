@@ -25,7 +25,7 @@ class BlurFilter extends ImageFilter {
         int count = 0;
 
         // Iterate over the surrounding pixels (3x3 neighborhood)
-        for (int i = -1; i <= 1; i++) {
+        for (int i = 1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
                 int newX = x + i;
                 int newY = y + j;
