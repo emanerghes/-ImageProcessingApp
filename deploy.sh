@@ -2,7 +2,7 @@
 
 # Clone or update the source repository
 if [ ! -d "main" ]; then
-    git clone -b feature2 git@github.com:user/source_repo.git
+    git clone -b feature2 https://github.com/emanerghes/ImageProcessingApp.git
 else
     cd main
     git fetch origin
@@ -18,5 +18,5 @@ cd main
 
 # Commit and push changes to the destination branch
 git add .
-git commit -m "Deploy changes"
+git commit -m "Deploy changes from feature2 to main"
 git push origin main
